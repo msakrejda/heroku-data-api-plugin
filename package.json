@@ -1,6 +1,6 @@
 {
   "name": "heroku-data-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A heroku plugin to communicate with the undocumented, internal, unstable data APIs.",
   "main": "index.js",
   "author": "Maciek Sakrejda m.sakrejda@gmail.com",
