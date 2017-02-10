@@ -10,13 +10,13 @@ data APIs. We hope to bring you a real API one day.
 ### Installation
 
 ```bash
-$ heroku plugins:install heroku-data-api-plugin
+$ heroku plugins:install heroku-data-api
 ```
 
 #### Update
 
 ```bash
-$ heroku plugins:update heroku-data-api-plugin
+$ heroku plugins:update heroku-data-api
 ```
 
 ## THIS IS BETA SOFTWARE
