@@ -1,0 +1,32 @@
+{
+  "name": "heroku-data-api",
+  "version": "0.0.0",
+  "description": "A heroku plugin to communicate with the undocumented, internal, unstable data APIs.",
+  "main": "index.js",
+  "author": "Maciek Sakrejda m.sakrejda@gmail.com",
+  "repository": "uhoh-itsmaciek/heroku-data-api-plugin",
+  "bugs": {
+    "url": "https://github.com/uhoh-itsmaciek/heroku-data-api-plugin/issues"
+  },
+  "keywords": [
+    "heroku-plugin"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "co": "4.6.0",
+    "co-fs": "1.2.0",
+    "heroku-cli-util": "6.0.15"
+  },
+  "scripts": {
+    "test": "standard && mocha"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "chai-as-promised": "6.0.0",
+    "eslint": "3.14.1",
+    "eslint-config-standard": "6.2.1",
+    "mocha": "3.2.0",
+    "nock": "9.0.2",
+    "standard": "8.6.0"
+  }
+}
