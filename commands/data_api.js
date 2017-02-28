@@ -3,6 +3,7 @@
 let cli = require('heroku-cli-util')
 let co = require('co')
 let fs = require('co-fs')
+let util = require('../lib/util.js')
 
 module.exports = {
   topic: 'data-api',
@@ -37,7 +38,7 @@ Example:
     let request = {
       method: context.args.method.toUpperCase(),
       path: context.args.path,
-      host: 'postgres-api.heroku.com' // TODO: support yobuko
+      host: util.host()
     }
     if (['PATCH', 'PUT', 'POST'].includes(request.method)) {
       request.body = yield fs.readFile('/dev/stdin', 'utf8')
