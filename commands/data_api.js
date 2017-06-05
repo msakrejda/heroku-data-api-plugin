@@ -44,8 +44,8 @@ Example:
       let parsedBody
       try {
         parsedBody = JSON.parse(body)
-      } catch(e) {
-        throw new Error("Request body must be valid JSON")
+      } catch (e) {
+        throw new Error('Request body must be valid JSON')
       }
       request.body = parsedBody
     }
