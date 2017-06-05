@@ -10,7 +10,7 @@ module.exports = {
   description: 'make a single request to the internal, undocumented data API',
   help: `The api command is a convenient but low-level way to send requests
 to the internal, undocumented Heroku Data APIs for Heroku Postgres, Redis,
-and Apache Kafka on Heorku. It sends an HTTP request to the API
+and Apache Kafka on Heroku. It sends an HTTP request to the API
 using the given method on the given path. For methods PUT, PATCH,
 and POST, it uses stdin unmodified as the request body. It prints
 the response unmodified on stdout.
