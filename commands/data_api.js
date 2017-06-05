@@ -8,7 +8,6 @@ let util = require('../lib/util.js')
 module.exports = {
   topic: 'data-api',
   description: 'make a single request to the internal, undocumented data API',
-  default: true,
   help: `The api command is a convenient but low-level way to send requests
 to the internal, undocumented Heroku Data APIs for Heroku Postgres, Redis,
 and Apache Kafka on Heorku. It sends an HTTP request to the API
