@@ -28,5 +28,10 @@
     "mocha": "3.2.0",
     "nock": "9.0.2",
     "standard": "8.6.0"
-  }
+  },
+  "files": [
+    "/index.js",
+    "/lib",
+    "/commands"
+  ]
 }
