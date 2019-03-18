@@ -15,7 +15,7 @@
   "dependencies": {
     "co": "4.6.0",
     "co-fs": "1.2.0",
-    "heroku-cli-util": "6.0.15"
+    "heroku-cli-util": "8.0.11"
   },
   "scripts": {
     "test": "standard && mocha"
