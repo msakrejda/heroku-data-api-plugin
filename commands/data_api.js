@@ -2,7 +2,7 @@
 
 let cli = require('heroku-cli-util')
 let co = require('co')
-let fs = require('co-fs')
+let getStdin = require('get-stdin')
 let util = require('../lib/util.js')
 
 module.exports = {
@@ -40,7 +40,12 @@ Example:
       host: util.host()
     }
     if (['PATCH', 'PUT', 'POST'].includes(request.method)) {
-      let body = yield fs.readFile('/dev/stdin', 'utf8')
+      let body = getStdin()
+      if (!body) {
+        this.warn('no stdin provided')
+        return
+      }
+
       let parsedBody
       try {
         parsedBody = JSON.parse(body)
