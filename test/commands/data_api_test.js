@@ -26,22 +26,23 @@ describe('data-api', () => {
   })
 
   it('displays the request result info', function () {
-    let method = 'get'
-    let path = '/client/v11/postgresql-funky-1234'
-    let info = {name: 'myapp', uuid: '32d094f2-0318-4733-ab53-1d6f7a36abf7'}
+    const method = 'get'
+    const path = '/client/v11/postgresql-funky-1234'
+    const info = { name: 'myapp', uuid: '32d094f2-0318-4733-ab53-1d6f7a36abf7' }
 
     pg
       .get(path)
       .reply(200, info)
 
-    return cmd.run({args: {method, path}, flags: {}})
-              .then(() => {
-                expect(cli.stdout).to.equal(`{
+    return cmd.run({ args: { method, path }, flags: {} })
+      .then(() => {
+        expect(cli.stdout).to.equal(`{
   "name": "myapp",
   "uuid": "32d094f2-0318-4733-ab53-1d6f7a36abf7"
 }
 `)
-                expect(cli.stderr).to.be.empty
-              })
+        /* eslint-disable no-unused-expressions */
+        expect(cli.stderr).to.be.empty
+      })
   })
 })
