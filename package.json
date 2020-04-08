@@ -15,23 +15,27 @@
   "dependencies": {
     "co": "4.6.0",
     "co-fs": "1.2.0",
-    "heroku-cli-util": "8.0.11"
+    "heroku-cli-util": "8.0.12"
   },
   "scripts": {
     "test": "standard && mocha"
   },
   "devDependencies": {
-    "chai": "3.5.0",
-    "chai-as-promised": "6.0.0",
-    "eslint": "3.14.1",
-    "eslint-config-standard": "6.2.1",
-    "mocha": "3.2.0",
-    "nock": "9.0.2",
-    "standard": "8.6.0"
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "eslint": "6.8.0",
+    "eslint-config-standard": "14.1.1",
+    "mocha": "7.1.1",
+    "nock": "12.0.3",
+    "standard": "14.3.3"
   },
   "files": [
     "/index.js",
     "/lib",
     "/commands"
-  ]
+  ],
+  "mocha": {
+    "recursive": "true",
+    "require": "./test/init.js"
+  }
 }

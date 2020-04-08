@@ -1,9 +1,9 @@
 'use strict'
 
-let cli = require('heroku-cli-util')
-let co = require('co')
-let fs = require('co-fs')
-let util = require('../lib/util.js')
+const cli = require('heroku-cli-util')
+const co = require('co')
+const fs = require('co-fs')
+const util = require('../lib/util.js')
 
 module.exports = {
   topic: 'data-api',
@@ -30,17 +30,17 @@ Example:
   needsApp: false,
   needsAuth: true,
   args: [
-    {name: 'method', description: 'GET, POST, PUT, PATCH, or DELETE', optional: false},
-    {name: 'path', description: 'endpoint to call', optional: false}
+    { name: 'method', description: 'GET, POST, PUT, PATCH, or DELETE', optional: false },
+    { name: 'path', description: 'endpoint to call', optional: false }
   ],
-  run: cli.command({preauth: true}, co.wrap(function* (context, heroku) {
-    let request = {
+  run: cli.command({ preauth: true }, co.wrap(function * (context, heroku) {
+    const request = {
       method: context.args.method.toUpperCase(),
       path: context.args.path,
       host: util.host()
     }
     if (['PATCH', 'PUT', 'POST'].includes(request.method)) {
-      let body = yield fs.readFile('/dev/stdin', 'utf8')
+      const body = yield fs.readFile('/dev/stdin', 'utf8')
       let parsedBody
       try {
         parsedBody = JSON.parse(body)
@@ -49,7 +49,7 @@ Example:
       }
       request.body = parsedBody
     }
-    let response = yield heroku.request(request)
+    const response = yield heroku.request(request)
 
     if (typeof response === 'object') {
       cli.styledJSON(response)
