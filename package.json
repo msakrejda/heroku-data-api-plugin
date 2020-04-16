@@ -15,8 +15,12 @@
   "dependencies": {
     "co": "4.6.0",
     "co-fs": "1.2.0",
-    "heroku-cli-util": "8.0.11"
+    "heroku-cli-util": "8.0.11",
+    "get-stdin": "7.0.0"
   },
+  "files": [
+    "commands"
+  ],
   "scripts": {
     "test": "standard && mocha"
   },
